@@ -11,10 +11,11 @@
 
 <body class="h-screen">
     <div class="h-full flex">
-        <div class="w-[20%] bg-[#C9231B] h-full">a</div>
+        <div class="w-[20%] bg-[#C9231B] h-full text-[#C9231B]"><p>a</p></div>
         <div class="w-[80%] pt-[4%] h-full">
             <div class="flex">
-                <div class="w-[40%] flex justify-start pl-[4%]"><button id="btnvolver" class="text-[#C9231B] text-5xl">&#8592</button>
+                <div class="w-[40%] flex justify-start pl-[4%]"><a href="index.html" id="btnvolver"
+                        class="text-[#C9231B] text-5xl">&#8592</a>
                 </div>
                 <div class="w-[60%] flex justify-start">
                     <p class="text-xl font-semibold flex items-center">Registro Personas</p>
@@ -38,9 +39,10 @@
                                 <p class="font-semibold">Area</p><input id="area" required type="text"
                                     class="pl-[1%] h-[80%] w-[90%] rounded-lg bg-[#F3F6FB] border-solid border-2 border-[#ED00D5]">
                             </div>
-                            <div id="cajausuario">
+                            <div>
                                 <p class="font-semibold">Usuario</p><input id="usuario" required type="text"
                                     class="pl-[1%] h-[80%] w-[90%] rounded-lg bg-[#F3F6FB] border-solid border-2 border-[#ED00D5]">
+                                <p id="cajausuario" class="text-xs text-[#C9231B]"></p>
                             </div>
                             <div>
                                 <p class="font-semibold">Edad</p><input id="edad" required type="number"
@@ -56,7 +58,9 @@
                         <p class="font-semibold">Email</p><input id="email" required type="text"
                             class="pl-[1%] h-[80%] w-full rounded-lg bg-[#F3F6FB] border-solid border-2 border-[#ED00D5]">
                     </div>
-                    <div class="flex justify-center"><button id="btnenviar" class="bg-[#CC2233] px-[8%] py-[2%] rounded-2xl text-white font-semibold">Enviar</button></div>
+                    <div class="flex justify-center"><button id="btnenviar"
+                            class="bg-[#CC2233] px-[8%] py-[2%] rounded-2xl text-white font-semibold">Enviar</button>
+                    </div>
             </div>
             </form>
         </div>
@@ -64,4 +68,5 @@
     </div>
 </body>
 <script src="pagina2.js"></script>
+
 </html>
