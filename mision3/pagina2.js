@@ -9,6 +9,7 @@ const edad = document.getElementById("edad");
 const direccion = document.getElementById("direccion");
 const email = document.getElementById("email");
 const cajausuario = document.getElementById("cajausuario");
+const cajaarea = document.getElementById("cajaarea")
 let datos = [];
 let datospersonas = [];
 let cont = 1;
@@ -58,6 +59,7 @@ function enviardatos() {
             console.log(datospersonas.length);
             for (let i = 0; i < datospersonas.length; i++) {
               if (usuario.value == datospersonas[i].usuario) {
+                cajaarea.innerHTML = ``
                 cajausuario.innerHTML = `Este usuario ya esta registrado`;
                 usuario.value = ""
                 break;
@@ -68,6 +70,7 @@ function enviardatos() {
                 persona.direccion = direccion.value;
                 persona.email = email.value;
                 persona.usuario = usuario.value;
+                persona.area = area.value.toLowerCase()
                 datos = JSON.parse(localStorage.getItem(`${cont2}`));
                 datos.push(persona);
                 localStorage.setItem(`${cont2}`, JSON.stringify(datos));
@@ -80,6 +83,8 @@ function enviardatos() {
             }
         }
       }
+    }else{
+      cajaarea.innerHTML = `Por favor ingrese una area valida ejemplo:tecnologia,marketing o docencia` 
     }
   }
 }
