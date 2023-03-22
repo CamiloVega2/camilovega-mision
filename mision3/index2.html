@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>MISION3.2</title>
+</head>
+
+<body class="h-screen">
+    <div class="h-full flex">
+        <div class="w-[20%] bg-[#C9231B] h-full">a</div>
+        <div class="w-[80%] pt-[4%] h-full">
+            <div class="flex">
+                <div class="w-[40%] flex justify-start pl-[4%]"><button id="btnvolver" class="text-[#C9231B] text-5xl">&#8592</button>
+                </div>
+                <div class="w-[60%] flex justify-start">
+                    <p class="text-xl font-semibold flex items-center">Registro Personas</p>
+                </div>
+            </div>
+            <div class="flex justify-center items-center h-[94%]">
+                <form id="formulario" class="w-[60%] h-full flex flex-col justify-between py-[7%]">
+                    <div class="flex justify-between h-[10%]">
+                        <div class="w-1/2 h-full">
+                            <p class="font-semibold">Nombres</p><input id="nombres" required type="text"
+                                class="pl-[1%] h-[80%] w-[90%] rounded-lg bg-[#F3F6FB] border-solid border-2 border-[#ED00D5]">
+                        </div>
+                        <div class="w-1/2">
+                            <p class="font-semibold">Apellidos</p><input id="apellidos" required type="text"
+                                class="pl-[1%] h-[80%] w-[90%] rounded-lg bg-[#F3F6FB] border-solid border-2 border-[#ED00D5]">
+                        </div>
+                    </div>
+                    <div class="h-[10%]">
+                        <div class="flex h-full">
+                            <div>
+                                <p class="font-semibold">Area</p><input id="area" required type="text"
+                                    class="pl-[1%] h-[80%] w-[90%] rounded-lg bg-[#F3F6FB] border-solid border-2 border-[#ED00D5]">
+                            </div>
+                            <div id="cajausuario">
+                                <p class="font-semibold">Usuario</p><input id="usuario" required type="text"
+                                    class="pl-[1%] h-[80%] w-[90%] rounded-lg bg-[#F3F6FB] border-solid border-2 border-[#ED00D5]">
+                            </div>
+                            <div>
+                                <p class="font-semibold">Edad</p><input id="edad" required type="number"
+                                    class="pl-[1%] h-[80%] w-[90%] rounded-lg bg-[#F3F6FB] border-solid border-2 border-[#ED00D5]">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="h-[10%]">
+                        <p class="font-semibold">Direccion</p><input id="direccion" required type="text"
+                            class="pl-[1%] h-[80%] w-full rounded-lg bg-[#F3F6FB] border-solid border-2 border-[#ED00D5]">
+                    </div>
+                    <div class="h-[10%]">
+                        <p class="font-semibold">Email</p><input id="email" required type="text"
+                            class="pl-[1%] h-[80%] w-full rounded-lg bg-[#F3F6FB] border-solid border-2 border-[#ED00D5]">
+                    </div>
+                    <div class="flex justify-center"><button id="btnenviar" class="bg-[#CC2233] px-[8%] py-[2%] rounded-2xl text-white font-semibold">Enviar</button></div>
+            </div>
+            </form>
+        </div>
+    </div>
+    </div>
+</body>
+<script src="pagina2.js"></script>
+</html>

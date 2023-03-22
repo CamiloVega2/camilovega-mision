@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>MISION3</title>
+</head>
+
+<body class="h-screen">
+    <div class="h-full flex">
+        <div class="w-[20%] bg-[#C9231B] h-full">a</div>
+        <div class="w-[80%] mt-[4%]">
+            <div class="flex w-full">
+                <div class="w-1/2 flex justify-end">
+                    <p class="text-4xl font-bold">Usuarios</p>
+                </div>
+                <div class="w-1/2 flex justify-end pr-[3%]"><button id="btncrearusuario"
+                        class="bg-[#CC2233] rounded-full px-[8%] py-[1.5%] text-white text-sm font-semibold">Crear
+                        Usuario</button></div>
+            </div>
+            <div class="h-[5%] flex items-center mt-[2%]">
+                <p class="font-semibold pl-[5%] text-lg">Buscar usuario</p>
+                <div
+                    class="rounded-full border-solid border-black border w-[1.1%] h-[40%] ml-[0.5%] text-sm flex items-center justify-center">
+                    <button>?</button>
+                </div><input id="buscarusuario" class="pl-[1%] w-[33%] border-solid border-black border bg-[#F3F6FB] rounded-2xl h-full ml-[0.5%]"
+                    type="text">
+            </div>
+            <div class="mr-[2%] mt-[5%] h-[80%]">
+                <table class="w-[90%] mx-[5%] h-full">
+                    <tr class="flex w-full bg-[#F3F6FB] py-[0.6%]">
+                        <th class="w-[20%] flex justify-center pl-[1%]">Area <div class="mt-[1%]"><img class="ml-[50%]"
+                                    src="asset/Vector.png"></div>
+                        </th>
+                        <th class="w-[20%] flex justify-center pl-[1%]">Nombre <div class="mt-[1%]"><img
+                                    class="ml-[50%]" src="asset/Vector.png"></div>
+                        </th>
+                        <th class="w-[20%] flex justify-center pl-[1%]">Usuario<div class="mt-[1%]"><img
+                                    class="ml-[50%]" src="asset/Vector.png"></div>
+                        </th>
+                        <th class="w-[20%] flex justify-center pl-[1%]">Email <div class="mt-[1%]"><img class="ml-[50%]"
+                                    src="asset/Vector.png"></div>
+                        </th>
+                        <th class="w-[20%] flex justify-center pl-[1%]">Edad <div class="mt-[1%]"><img class="ml-[50%]"
+                                    src="asset/Vector.png"></div>
+                        </th>
+                    </tr>
+                    <tr class="flex w-full">
+                        <td class="w-[20%] flex justify-center">Docencia</td>
+                        <td id="nombredocencia" class="w-[20%] flex justify-center"></td>
+                        <td id="usuariodocencia" class="w-[20%] flex justify-center"></td>
+                        <td id="emaildocencia" class="w-[20%] flex justify-center"></td>
+                        <td id="edaddocencia" class="w-[20%] flex justify-center"></td>
+                    </tr>
+                    <tr class="flex w-full">
+                        <td class="w-[20%] flex justify-center">Tecnologia</td>
+                        <td id="nombretecnologia" class="w-[20%] flex justify-center"></td>
+                        <td id="usuariotecnologia" class="w-[20%] flex justify-center"></td>
+                        <td id="emailtecnologia" class="w-[20%] flex justify-center"></td>
+                        <td id="edadtecnologia" class="w-[20%] flex justify-center"></td>
+                    </tr>
+                    <tr class="flex w-full">
+                        <td class="w-[20%] flex justify-center">Marketing</td>
+                        <td id="nombremarketing" class="w-[20%] flex justify-center"></td>
+                        <td id="usuariomarketing" class="w-[20%] flex justify-center"></td>
+                        <td id="emailmarketing" class="w-[20%] flex justify-center"></td>
+                        <td id="edadmarketing" class="w-[20%] flex justify-center"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="pagina1.js"></script>
+
+</html>
