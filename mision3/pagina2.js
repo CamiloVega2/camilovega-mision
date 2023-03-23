@@ -9,7 +9,7 @@ const edad = document.getElementById("edad");
 const direccion = document.getElementById("direccion");
 const email = document.getElementById("email");
 const cajausuario = document.getElementById("cajausuario");
-const cajaarea = document.getElementById("cajaarea")
+const cajaarea = document.getElementById("cajaarea");
 let datos = [];
 let datospersonas = [];
 let cont = 1;
@@ -25,66 +25,57 @@ function enviardatos() {
     direccion.value != "" &&
     email.value != ""
   ) {
-    if (
-      area.value.toLowerCase() == "docencia" ||
-      area.value.toLowerCase() == "marketing" ||
-      area.value.toLowerCase() == "tecnologia"
-    ) {
-      datospersonas = JSON.parse(localStorage.getItem(`${cont2}`));
+    datospersonas = JSON.parse(localStorage.getItem(`${cont2}`));
+    cont = JSON.parse(localStorage.getItem("cont"));
+    if (cont == undefined || cont == null) {
+      cont = 1;
+      switch (cont) {
+        case 1:
+          persona.nombre = nombres.value;
+          persona.apellido = apellidos.value;
+          persona.edad = edad.value;
+          persona.direccion = direccion.value;
+          persona.email = email.value;
+          persona.usuario = usuario.value;
+          persona.area = area.value.toLowerCase();
+          datos.push(persona);
+          localStorage.setItem(`${cont2}`, JSON.stringify(datos));
+          localStorage.setItem(`${cont}`, JSON.stringify(persona));
+          cont += 1;
+          localStorage.setItem("cont", `${cont}`);
+          open("index.html", "_self");
+          break;
+      }
+    } else {
       cont = JSON.parse(localStorage.getItem("cont"));
-      if (cont == undefined || cont == null) {
-        cont = 1;
-        switch (cont) {
-          case 1:
+      datospersonas = JSON.parse(localStorage.getItem(`${cont2}`));
+      switch (cont) {
+        default:
+          datos = datospersonas
+          if (datos.includes(`${usuario.value}`)) {
+            alert("hola");
+            cajausuario.innerHTML = `Este usuario ya esta registrado`;
+            usuario.value = "";
+          } else {
+
+            alert("hola2");
+            datos = datospersonas;
             persona.nombre = nombres.value;
             persona.apellido = apellidos.value;
             persona.edad = edad.value;
             persona.direccion = direccion.value;
             persona.email = email.value;
             persona.usuario = usuario.value;
-            persona.area = area.value.toLowerCase()
+            persona.area = area.value.toLowerCase();
             datos.push(persona);
+            console.log(datos);
             localStorage.setItem(`${cont2}`, JSON.stringify(datos));
             localStorage.setItem(`${cont}`, JSON.stringify(persona));
             cont += 1;
             localStorage.setItem("cont", `${cont}`);
-            open("index.html", "_self");
-            break;
-        }
-      } else {
-        cont = JSON.parse(localStorage.getItem("cont"));
-        datospersonas = JSON.parse(localStorage.getItem(`${cont2}`));
-        switch (cont) {
-          default:
-            console.log(datospersonas.length);
-            for (let i = 0; i < datospersonas.length; i++) {
-              if (usuario.value == datospersonas[i].usuario) {
-                cajaarea.innerHTML = ``
-                cajausuario.innerHTML = `Este usuario ya esta registrado`;
-                usuario.value = ""
-                break;
-              } else {
-                persona.nombre = nombres.value;
-                persona.apellido = apellidos.value;
-                persona.edad = edad.value;
-                persona.direccion = direccion.value;
-                persona.email = email.value;
-                persona.usuario = usuario.value;
-                persona.area = area.value.toLowerCase()
-                datos = JSON.parse(localStorage.getItem(`${cont2}`));
-                datos.push(persona);
-                localStorage.setItem(`${cont2}`, JSON.stringify(datos));
-                localStorage.setItem(`${cont}`, JSON.stringify(persona));
-                cont += 1
-                localStorage.setItem("cont", `${cont}`);
-                open("index.html", "_self");
-                break;
-              }
-            }
-        }
+            // open("index.html", "_self");
+          }
       }
-    }else{
-      cajaarea.innerHTML = `Por favor ingrese una area valida ejemplo:tecnologia,marketing o docencia` 
     }
   }
 }

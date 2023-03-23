@@ -1,38 +1,104 @@
-const buscarusuario = document.getElementById("buscarusuario")
-const btncrearusuario = document.getElementById("btncrearusuario")
-const nombredocencia = document.getElementById("nombredocencia")
-const edaddocencia = document.getElementById("edaddocencia")
-const emaildocencia = document.getElementById("emaildocencia")
-const usuariodocencia = document.getElementById("usuariodocencia")
-const nombretecnologia = document.getElementById("nombretecnologia")
-const edadtecnologia = document.getElementById("edadtecnologia")
-const emailtecnologia = document.getElementById("emailtecnologia")
-const usuariotecnologia = document.getElementById("usuariotecnologia")
-const nombremarketing = document.getElementById("nombremarketing")
-const edadmarketing = document.getElementById("edadmarketing")
-const emailmarketing = document.getElementById("emailmarketing")
-const usuariomarketing = document.getElementById("usuariomarketing")
-let cont = 0
-let cont2 = -1
-let objeto = JSON.parse(localStorage.getItem(`${cont}`))
-let datospersonas = JSON.parse(localStorage.getItem(`${cont2}`))
-for(let i = 0;i < datospersonas.length;i++){
-    if(datospersonas[i].area == "docencia"){
-        nombredocencia.innerHTML += `<label>${datospersonas[i].nombre}</label>`
-        edaddocencia.innerHTML += `<label>${datospersonas[i].edad}</label>`
-        emaildocencia.innerHTML += `<label>${datospersonas[i].email}</label>`
-        usuariodocencia.innerHTML += `<label>${datospersonas[i].usuario}</label>`
-    }else{
-        if(datospersonas[i].area == "tecnologia"){
-            nombretecnologia.innerHTML += `<label>${datospersonas[i].nombre}</label>`
-            edadtecnologia.innerHTML += `<label>${datospersonas[i].edad}</label>`
-            emailtecnologia.innerHTML += `<label>${datospersonas[i].email}</label>`
-            usuariotecnologia.innerHTML += `<label>${datospersonas[i].usuario}</label>`
-        }else{
-            nombremarketing.innerHTML += `<label>${datospersonas[i].nombre}</label>`
-            edadmarketing.innerHTML += `<label>${datospersonas[i].edad}</label>`
-            emailmarketing.innerHTML += `<label>${datospersonas[i].email}</label>`
-            usuariomarketing.innerHTML += `<label>${datospersonas[i].usuario}</label>`
+const buscarusuario = document.getElementById("buscarusuario");
+const btncrearusuario = document.getElementById("btncrearusuario");
+const tabla = document.getElementById("tabla");
+let cont = 0;
+let cont2 = -1;
+let objeto = JSON.parse(localStorage.getItem(`${cont}`));
+let datospersonas = JSON.parse(localStorage.getItem(`${cont2}`));
+console.log(datospersonas.length);
+if (datospersonas.length > 0) {
+  for (let i = 0; i < datospersonas.length; i++) {
+    if (i == 0) {
+      tabla.innerHTML += ` <tr class="flex w-full">
+        <td class="w-[20%] flex justify-center items-center">${datospersonas[
+          i
+        ].area.toUpperCase()}</td>
+        <td
+          id= "nombre${datospersonas[i].area}"
+          class="w-[20%] flex justify-center  items-center flex-col"
+        ></td>
+        <td
+          id= "usuario${datospersonas[i].area}"
+          class="w-[20%] flex justify-center items-center flex-col"
+        ></td>
+        <td
+          id= "email${datospersonas[i].area}"
+          class="w-[20%] flex justify-center   items-center flex-col"
+        ></td>
+        <td
+          id="edad${datospersonas[i].area}"
+          class="w-[20%] flex justify-center    items-center flex-col"
+        ></td>
+      </tr>
+      `;
+      const nombre = document.getElementById(`nombre${datospersonas[i].area}`);
+      const usuario = document.getElementById(
+        `usuario${datospersonas[i].area}`
+      );
+      const email = document.getElementById(`email${datospersonas[i].area}`);
+      const edad = document.getElementById(`edad${datospersonas[i].area}`);
+      nombre.innerHTML = `<p>${datospersonas[i].nombre}</p>`;
+      usuario.innerHTML = `<p>${datospersonas[i].usuario}</p>`;
+      email.innerHTML = `<p>${datospersonas[i].email}</p>`;
+      edad.innerHTML = `<p>${datospersonas[i].edad}</p>`;
+    } else {
+      for (let j = 0; j < datospersonas.length; j++) {
+        if (datospersonas[j].area != datospersonas[i].area) {
+          tabla.innerHTML += ` <tr class="flex w-full">
+        <td class="w-[20%] flex justify-center items-center">${datospersonas[
+          i
+        ].area.toUpperCase()}</td>
+        <td
+          id= "nombre${datospersonas[i].area}"
+          class="w-[20%] flex justify-center  items-center flex-col"
+        ></td>
+        <td
+          id= "usuario${datospersonas[i].area}"
+          class="w-[20%] flex justify-center items-center flex-col"
+        ></td>
+        <td
+          id= "email${datospersonas[i].area}"
+          class="w-[20%] flex justify-center   items-center flex-col"
+        ></td>
+        <td
+          id="edad${datospersonas[i].area}"
+          class="w-[20%] flex justify-center    items-center flex-col"
+        ></td>
+      </tr>
+      `;
+          const nombre = document.getElementById(
+            `nombre${datospersonas[i].area}`
+          );
+          const usuario = document.getElementById(
+            `usuario${datospersonas[i].area}`
+          );
+          const email = document.getElementById(
+            `email${datospersonas[i].area}`
+          );
+          const edad = document.getElementById(`edad${datospersonas[i].area}`);
+          nombre.innerHTML = `<p>${datospersonas[i].nombre}</p>`;
+          usuario.innerHTML = `<p>${datospersonas[i].usuario}</p>`;
+          email.innerHTML = `<p>${datospersonas[i].email}</p>`;
+          edad.innerHTML = `<p>${datospersonas[i].edad}</p>`;
+          break;
+        } else {
+          const nombre = document.getElementById(
+            `nombre${datospersonas[i].area}`
+          );
+          const usuario = document.getElementById(
+            `usuario${datospersonas[i].area}`
+          );
+          const email = document.getElementById(
+            `email${datospersonas[i].area}`
+          );
+          const edad = document.getElementById(`edad${datospersonas[i].area}`);
+          nombre.innerHTML += `<p>${datospersonas[i].nombre}</p>`;
+          usuario.innerHTML += `<p>${datospersonas[i].usuario}</p>`;
+          email.innerHTML += `<p>${datospersonas[i].email}</p>`;
+          edad.innerHTML += `<p>${datospersonas[i].edad}</p>`;
+          break
         }
+      }
     }
+  }
 }

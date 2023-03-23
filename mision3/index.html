@@ -11,7 +11,9 @@
 
 <body class="h-screen">
     <div class="h-full flex">
-        <div class="w-[20%] bg-[#C9231B] h-full text-[#C9231B]"><p>a</p></div>
+        <div class="w-[20%] bg-[#C9231B] h-full text-[#C9231B]">
+            <p>a</p>
+        </div>
         <div class="w-[80%] pt-[4%]">
             <div class="flex w-full">
                 <div class="w-1/2 flex justify-end">
@@ -30,46 +32,27 @@
                     class="pl-[1%] w-[33%] border-solid border-black border bg-[#F3F6FB] rounded-2xl h-full ml-[0.5%]"
                     type="search">
             </div>
-            <div class="mr-[2%] mt-[5%] h-[75%]">
-                <table class="w-[90%] mx-[5%] h-full">
-                    <tr class="flex w-full bg-[#F3F6FB] py-[0.6%] h-[8%] items-center">
-                        <th class="w-[20%] flex justify-center pl-[1%]">Area <div class="mt-[1%]"><img class="ml-[50%]"
-                                    src="asset/Vector.png"></div>
-                        </th>
-                        <th class="w-[20%] flex justify-center pl-[1%]">Nombre <div class="mt-[1%]"><img
-                                    class="ml-[50%]" src="asset/Vector.png"></div>
-                        </th>
-                        <th class="w-[20%] flex justify-center pl-[1%]">Usuario<div class="mt-[1%]"><img
-                                    class="ml-[50%]" src="asset/Vector.png"></div>
-                        </th>
-                        <th class="w-[20%] flex justify-center pl-[1%]">Email <div class="mt-[1%]"><img class="ml-[50%]"
-                                    src="asset/Vector.png"></div>
-                        </th>
-                        <th class="w-[20%] flex justify-center pl-[1%]">Edad <div class="mt-[1%]"><img class="ml-[50%]"
-                                    src="asset/Vector.png"></div>
-                        </th>
-                    </tr>
-                    <tr class="flex w-full h-[25%]">
-                        <td class="w-[20%] flex justify-center items-center">Docencia</td>
-                        <td id="nombredocencia" class="w-[20%] flex justify-center  items-center flex-col"></td>
-                        <td id="usuariodocencia" class="w-[20%] flex justify-center items-center flex-col"></td>
-                        <td id="emaildocencia" class="w-[20%] flex justify-center   items-center flex-col"></td>
-                        <td id="edaddocencia" class="w-[20%] flex justify-center    items-center flex-col"></td>
-                    </tr>
-                    <tr class="flex w-full h-[25%]">
-                        <td class="w-[20%] flex justify-center items-center">Tecnologia</td>
-                        <td id="nombretecnologia" class="w-[20%] flex justify-center items-center flex-col"></td>
-                        <td id="usuariotecnologia" class="w-[20%] flex justify-center items-center flex-col"></td>
-                        <td id="emailtecnologia" class="w-[20%] flex justify-center items-center flex-col"></td>
-                        <td id="edadtecnologia" class="w-[20%] flex justify-center items-center flex-col"></td>
-                    </tr>
-                    <tr class="flex w-full h-[25%]">
-                        <td class="w-[20%] flex justify-center items-center">Marketing</td>
-                        <td id="nombremarketing" class="w-[20%] flex justify-center items-center flex-col"></td>
-                        <td id="usuariomarketing" class="w-[20%] flex justify-center items-center flex-col"></td>
-                        <td id="emailmarketing" class="w-[20%] flex justify-center items-center flex-col"></td>
-                        <td id="edadmarketing" class="w-[20%] flex justify-center items-center flex-col"></td>
-                    </tr>
+            <div class="mr-[2%] mt-[5%] h-[75%] overflow-y-scroll">
+                <table class="w-[90%] mx-[5%] h-full overflow-y-scroll">
+                    <tbody id="tabla">
+                        <tr class="flex w-full bg-[#F3F6FB] py-[0.6%] items-center">
+                            <th class="w-[20%] flex justify-center pl-[1%]">Area <div class="mt-[1%]"><img
+                                        class="ml-[50%]" src="asset/Vector.png"></div>
+                            </th>
+                            <th class="w-[20%] flex justify-center pl-[1%]">Nombre <div class="mt-[1%]"><img
+                                        class="ml-[50%]" src="asset/Vector.png"></div>
+                            </th>
+                            <th class="w-[20%] flex justify-center pl-[1%]">Usuario<div class="mt-[1%]"><img
+                                        class="ml-[50%]" src="asset/Vector.png"></div>
+                            </th>
+                            <th class="w-[20%] flex justify-center pl-[1%]">Email <div class="mt-[1%]"><img
+                                        class="ml-[50%]" src="asset/Vector.png"></div>
+                            </th>
+                            <th class="w-[20%] flex justify-center pl-[1%]">Edad <div class="mt-[1%]"><img
+                                        class="ml-[50%]" src="asset/Vector.png"></div>
+                            </th>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
         </div>
