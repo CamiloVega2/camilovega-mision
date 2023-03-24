@@ -51,15 +51,11 @@ function enviardatos() {
       datospersonas = JSON.parse(localStorage.getItem(`${cont2}`));
       switch (cont) {
         default:
-          datos = datospersonas
-          if (datos.includes(`${usuario.value}`)) {
-            alert("hola");
-            cajausuario.innerHTML = `Este usuario ya esta registrado`;
-            usuario.value = "";
-          } else {
-
-            alert("hola2");
-            datos = datospersonas;
+          const verificar = datospersonas.every(
+            (el) => el.usuario != `${usuario.value}`
+          );
+          if (verificar) {
+            datos = datospersonas
             persona.nombre = nombres.value;
             persona.apellido = apellidos.value;
             persona.edad = edad.value;
@@ -68,12 +64,14 @@ function enviardatos() {
             persona.usuario = usuario.value;
             persona.area = area.value.toLowerCase();
             datos.push(persona);
-            console.log(datos);
             localStorage.setItem(`${cont2}`, JSON.stringify(datos));
             localStorage.setItem(`${cont}`, JSON.stringify(persona));
             cont += 1;
             localStorage.setItem("cont", `${cont}`);
-            // open("index.html", "_self");
+            open("index.html", "_self");
+          } else {
+            cajausuario.innerText = `Este usuario ya esta registrado`
+            usuario.value = ""
           }
       }
     }
