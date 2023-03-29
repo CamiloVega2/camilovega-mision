@@ -26,7 +26,7 @@ function validar() {
         el.email != correo.value &&
         cont == verificar.length
       ) {
-        alerta2.innerHTML = `<p class = "text-sm text-red-600 font-bold">Verifique sus credenciales</p>`;
+        alerta2.innerHTML = `<p class = "text-xs text-red-600 font-bold">Verifique sus credenciales</p>`;
         correo.value = "";
         apodo.value = "";
       }
@@ -34,6 +34,4 @@ function validar() {
   });
 }
 const btn = document.getElementById("btn");
-const btn1 = document.getElementById("btn1")
 btn.addEventListener("click", validar);
-btn1.addEventListener("click",validar)
