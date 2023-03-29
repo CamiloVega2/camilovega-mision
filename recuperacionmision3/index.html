@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Recuperacion</title>
+</head>
+
+<body class="h-screen">
+    <div class="h-full sm:flex hidden">
+        <div class="flex w-[60%] flex-wrap bg-[#191A24] gap-6 h-full pl-[2%]">
+            <div class="flex flex-col gap-8">
+                <div><img src="asset/1.png"></div>
+                <div><img src="asset/4.png"></div>
+                <div><img src="asset/7.png"></div>
+            </div>
+            <div class="flex flex-col gap-8">
+                <div><img src="asset/2.png"></div>
+                <div><img src="asset/5.png"></div>
+                <div><img src="asset/8.png"></div>
+            </div>
+            <div class="flex flex-col gap-8 pt-[2%]">
+                <div><img src="asset/3.png"></div>
+                <div><img src="asset/6.png"></div>
+                <div><img src="asset/9.png"></div>
+            </div>
+        </div>
+        <div class="w-[40%] flex flex-col items-center justify-center gap-10">
+            <div class="w-[60%]"><img src="asset/Frame 13.png"></div>
+            <div class="w-[60%] pr-[20%]">
+                <p class="text-[#3E334E]">A new way to experience real state in the infinite virtual space</p>
+            </div>
+            <div class="w-[60%]">
+                <p class="text-[#3E334E] font-bold text-2xl">Login</p>
+            </div>
+            <div class="w-[60%] h-[8%]" id="cajacorreo">
+                <p class="text-[#3E334E] font-semibold text-sm">Email</p><input class="border-solid border-2 h-[60%] pl-[2%] w-full" type="text" id="correo"><p id="alerta1"></p>
+            </div>
+            <div class="w-[60%] h-[8%]" id="cajaapodo">
+                <p class="text-[#3E334E] font-semibold text-sm">Usuario</p><input class="border-solid border-2 h-[60%] pl-[2%] w-full" type="password" id="apodo"><p id="alerta2"></p>
+            </div>
+            <div class="w-[60%] flex justify-between">
+                <label class="text-[#3E334E]"><input type="checkbox">Remember me</label>
+                <a href="hola.com" class="text-[#3E334E]">Forgot password?</a>
+            </div>
+            <div class="w-[60%] flex justify-between"><button class="text-white bg-[#3E334E] px-[18%] py-[2%] rounded-lg" id="btn">Login</button><button class="text-[#3E334E] border-solid border border-black px-[18%] py-[2%] rounded-lg">Sign Up</button></div>
+            <div class="w-[60%] text-center"><p class="text-[#3E334E]">Or, login with</p></div>
+            <div class="w-[60%] flex justify-between">
+            <button class="text-[#3E334E] border border-solid border-black px-[8%] py-[2%] rounded-md">Facebook</button>
+            <button class="text-[#3E334E] border border-solid border-black px-[8%] py-[2%] rounded-md">Linked In</button>
+            <button class="text-[#3E334E] border border-solid border-black px-[8%] py-[2%] rounded-md">Google</button></div>
+        </div>
+    </div>
+    <div class="sm:hidden w-full h-screen">
+        <div><img src="asset/10.png"></div>
+        <div class="flex flex-col justify-center gap-5 px-[4%]">
+            <div class=""><img src="asset/Frame 13.png"></div>
+            <div>
+                <p class="text-[#3E334E]">A new way to experience real state in the infinite virtual space</p>
+            </div>
+            <div class="">
+                <p class="text-[#3E334E] font-bold text-xl">Login</p>
+            </div>
+            <div class="h-[8%]" id="cajacorreo">
+                <p class="text-[#3E334E] font-medium text-sm">Email</p><input class="border-solid border-2  pl-[2%] w-full" type="text" id="correo"><p id="alerta1"></p>
+            </div>
+            <div class="h-[8%]" id="cajaapodo">
+                <p class="text-[#3E334E] font-medium text-sm">Usuario</p><input class="border-solid border-2  pl-[2%] w-full" type="password" id="apodo"><p id="alerta2"></p>
+            </div>
+            <div class="flex justify-between">
+                <label class="text-[#3E334E]"><input type="checkbox">Remember me</label>
+                <a href="hola.com" class="text-[#3E334E]">Forgot password?</a>
+            </div>
+            <div class="flex justify-between"><button class="text-white bg-[#3E334E] rounded-lg px-[15%] py-[3%]" id="btn1">Login</button>
+                <button class="text-[#3E334E] border-solid border border-black rounded-lg  px-[15%] py-[3%]">Sign Up</button></div>
+            <div class="text-center"><p class="text-[#3E334E]">Or, login with</p></div>
+            <div class="flex justify-between">
+            <button class="text-[#3E334E] border border-solid border-black rounded-md">Facebook</button>
+            <button class="text-[#3E334E] border border-solid border-black rounded-md">Linked In</button>
+            <button class="text-[#3E334E] border border-solid border-black rounded-md">Google</button></div>
+        </div>
+    </div>
+</body>
+<script src="main.js"></script>
+</html>
